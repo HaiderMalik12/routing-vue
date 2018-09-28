@@ -3,6 +3,7 @@
         <navbar />
         <main role="main" class="container">
             <!-- render router content here  -->
+            <router-view></router-view>
         </main>
     </div>
 </template>
