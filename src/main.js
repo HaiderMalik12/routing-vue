@@ -19,8 +19,12 @@ const router = new VueRouter({
 	routes: [
 		{
 			path: '/user/:id',
-			component: User
-			//define child routes for user
+			component: User,
+			children: [
+				{ path: 'profile', component: UserProfile },
+				{ path: 'messages', component: UserMessages },
+				{ path: 'posts', component: UserPosts }
+			]
 		}
 	]
 });
