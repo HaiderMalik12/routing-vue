@@ -10,7 +10,6 @@
         <!-- Tab panes -->
         <div class="tab-content col-8">
             <div class="tab-pane fade show active" role="tabpanel">
-                <!-- render user nested content -->
                 <router-view></router-view>
             </div>
 

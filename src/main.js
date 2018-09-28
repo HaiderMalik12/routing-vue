@@ -7,6 +7,9 @@ import UserProfile from './components/user/UserProfile.vue';
 import UserMessages from './components/user/UserMessages.vue';
 import UserPosts from './components/user/UserPosts.vue';
 
+import ProductList from './components/product/ProductList.vue';
+import ProductForm from './components/product/ProductForm.vue';
+
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 Vue.config.productionTip = false;
@@ -25,6 +28,14 @@ const router = new VueRouter({
 				{ path: 'messages', component: UserMessages },
 				{ path: 'posts', component: UserPosts }
 			]
+		},
+		{
+			path: '/products',
+			component: ProductList
+		},
+		{
+			path: '/products/new',
+			component: ProductForm
 		}
 	]
 });
