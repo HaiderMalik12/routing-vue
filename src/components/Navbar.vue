@@ -9,7 +9,7 @@
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                         <!-- only authenticated user can view the dashboard route -->
-                        <router-link class="nav-link" to="/dashboard" v-if="isLoggedIn">
+                        <router-link class="nav-link" to="/dashboard">
                             Dashboard
                         </router-link>
                     </li>
@@ -22,15 +22,6 @@
 <script>
 export default {
 name: 'Navbar',
-computed:{
-   isLoggedIn(){
-   const user = localStorage.getItem('user');
-    if(user){
-        return true
-    }
-    return false
-   }
-}
 }
 </script>
 
