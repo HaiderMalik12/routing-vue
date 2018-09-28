@@ -5,6 +5,7 @@ import VueRouter from 'vue-router';
 import Home from './components/Home.vue';
 import Blog from './components/Blog.vue';
 import Products from './components/Products.vue';
+import ProductDetails from './components/ProductDetails.vue';
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
@@ -20,6 +21,7 @@ const router = new VueRouter({
 	routes: [
 		{ path: '/', component: Home },
 		{ path: '/products', component: Products },
+		// add route for product details
 		{ path: '/blog', component: Blog }
 	]
 });
