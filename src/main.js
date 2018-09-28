@@ -22,6 +22,7 @@ const router = new VueRouter({
 		{ path: '/', component: Home },
 		{ path: '/products', component: Products },
 		// add route for product details
+		{ path: '/products/:id', component: ProductDetails },
 		{ path: '/blog', component: Blog }
 	]
 });
