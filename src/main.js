@@ -12,8 +12,13 @@ Vue.config.productionTip = false;
 Vue.use(VueRouter);
 const requiresAuth = (to, from, next) => {
 	//fetch user from localStorage
+	const user = localStorage.getItem('user');
 	//if there is a user then navigate to dashboard
-	//otherwise don't navigate to root route
+	if (user) {
+		next();
+	} else {
+		next({ path: '/' });
+	}
 };
 const router = new VueRouter({
 	base: __dirname,
@@ -25,7 +30,8 @@ const router = new VueRouter({
 		},
 		{
 			path: '/dashboard',
-			component: Dashboard
+			component: Dashboard,
+			beforeEnter: requiresAuth
 			//require auth here only authenticated user
 			//can access the dashboard route
 		}

@@ -27,6 +27,7 @@ methods:{
         const user = {email: this.email, password: this.password};
         console.log(user)
         //save the user to localStorage
+        localStorage.setItem('user', JSON.stringify(user));
 
     }
 }
