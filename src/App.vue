@@ -2,14 +2,14 @@
     <div>
         <navbar />
         <main role="main" class="container">
-            <!-- render router content here  -->
+            <!-- content  -->
             <router-view></router-view>
         </main>
     </div>
 </template>
 
 <script>
-import Navbar from './components/Navbar.vue';
+import Navbar from './components/Navbar.vue'
 export default {
     name: 'app',
     components:{
