@@ -19,6 +19,8 @@ methods:{
     saveProduct(e){
         e.preventDefault();
         //navigate programtically to /products
+        // this.$router.push('/products')
+        this.$router.push({path : '/products'})
     }
 }
 }
